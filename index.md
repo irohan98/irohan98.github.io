@@ -26,6 +26,7 @@ body_class: home
   </aside>
   <div class="home-hero-copy">
     <!-- Main intro copy -->
+    <div class="home-hero-spacer" aria-hidden="true"></div>
     <h2>Hey! This is my personal portfolio hub</h2>
     <p class="home-pun">I am a Machine Learning Engineer — let’s model a great first impression. Ready to deep‑dive? (Pun intended.)</p>
   </div>
