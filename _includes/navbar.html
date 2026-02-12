@@ -1,4 +1,4 @@
-<!-- Navigation -->
+<!-- Top navbar (used by the theme on non-home pages) -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand" href="{{"/" | relative_url }}">{{ site.title | escape }}</a>
@@ -7,15 +7,22 @@
       <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
+      <!-- Navigation links -->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{"/about" | relative_url }}">About</a>
+          <a class="nav-link" href="{{"/#experience" | relative_url }}">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ "/posts" | relative_url }}">Posts</a>
+          <a class="nav-link" href="{{"/#projects" | relative_url }}">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{"/#skills" | relative_url }}">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{"/#publications" | relative_url }}">Publications</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{"/contact" | relative_url }}">Contact</a>

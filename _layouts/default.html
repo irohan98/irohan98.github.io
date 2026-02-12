@@ -1,21 +1,42 @@
 <!DOCTYPE html>
-
 <html>
-
 {% include head.html %}
+<body class="site{% if page.body_class %} {{ page.body_class }}{% endif %}">
+  <!-- Page shell: sidebar + main content -->
+  <div class="site-shell">
+    <!-- Left sidebar navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark">RI</span>
+        <span class="brand-text">Rohan</span>
+      </div>
 
-<body>
+      <!-- Primary navigation links -->
+      <nav class="site-nav" aria-label="Primary">
+        <a href="{{ '/' | relative_url }}"><i class="fas fa-home" aria-hidden="true"></i><span>Home</span></a>
+        <a href="{{ '/about' | relative_url }}"><i class="far fa-user" aria-hidden="true"></i><span>About Me</span></a>
+        <a href="{{ '/resume' | relative_url }}"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Resume</span></a>
+        <a href="{{ '/contact' | relative_url }}"><i class="far fa-envelope" aria-hidden="true"></i><span>Contact</span></a>
+      </nav>
 
-  {% include navbar.html %}
+      <!-- Optional social icons -->
+      <div class="sidebar-social">
+        <a href="mailto:irohan90839@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+      </div>
 
-  {{ content }}
+      <!-- Sidebar footer -->
+      <p class="sidebar-footer">© {{ 'now' | date: "%Y" }} Rohan Ippalapally</p>
+    </aside>
 
-  {% include footer.html %}
+    <!-- Main content area (page-specific content + footer) -->
+    <main class="main-content">
+      {{ content }}
+      {% include footer.html %}
+    </main>
+  </div>
 
+  <!-- Scripts + analytics -->
   {% include scripts.html %}
-
   {% include google-analytics.html %}
-
 </body>
-
 </html>

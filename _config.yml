@@ -1,25 +1,20 @@
+# Site identity
 title:              Rohan Ippalapally
 email:              irohan90839@gmail.com
-description:        Welcome!! :)
+description:        Machine Learning Engineer focused on edge AI, computer vision, NLP, and MLOps.
 author:             Rohan Ippalapally
 baseurl:            "/"
 url:                "https://irohan98.github.io"
 
-# Social Profiles
-twitter_username:   SBootstrap
+# Social profiles used by templates
 github_username:    irohan98
-facebook_username:  rohan.ippalapally
-instagram_username: pally_98 
-linkedin_username: rohan-ippalapally
+linkedin_username:  rohan-ippalapally
 
-# Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+# Add your Google Analytics ID here to activate analytics
+google_analytics:   UA-XXXXXXXXX-X # put your google-analytics code
 
-# Build settings
+# Build settings for Jekyll
 markdown:           kramdown
-paginate:           5
-paginate_path:      "/posts/page:num/"
 plugins:
   - jekyll-feed
-  - jekyll-paginate
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site

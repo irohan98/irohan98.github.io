@@ -1,44 +1,46 @@
 ---
 layout: page
-title: Contact Me
-description: Have questions? I have answers.
-background: '/img/bg-contact.jpg'
-form: true
+title: Contact
 ---
 
-<p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
-<form name="sentMessage" id="contactForm" novalidate>
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Name</label>
-      <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-      <p class="help-block text-danger"></p>
+<!-- Contact page content -->
+<section class="section">
+  <div class="section-header">
+    <h2>Contact</h2>
+    <p>I’m open to full-time ML engineering roles, consulting, and collaborative research projects.</p>
+  </div>
+  <!-- Contact cards: info + quick message -->
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Reach Out</h3>
+      <div class="contact-details">
+        <div>
+          <span>Email</span>
+          <strong><a href="mailto:irohan90839@gmail.com">irohan90839@gmail.com</a></strong>
+        </div>
+        <div>
+          <span>Phone</span>
+          <strong>(469) 592-2472</strong>
+        </div>
+        <div>
+          <span>LinkedIn</span>
+          <strong><a href="https://www.linkedin.com/in/rohan-ippalapally" target="_blank" rel="noopener">rohan-ippalapally</a></strong>
+        </div>
+      </div>
+      <a class="btn primary" href="mailto:irohan90839@gmail.com">Send Email</a>
+    </div>
+    <div class="contact-card form">
+      <h3>Quick message</h3>
+      <!-- Simple mailto form -->
+      <form class="contact-form" action="mailto:irohan90839@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell me about the role or project."></textarea>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
     </div>
   </div>
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Email Address</label>
-      <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="form-group col-xs-12 floating-label-form-group controls">
-      <label>Phone Number</label>
-      <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="form-group floating-label-form-group controls">
-      <label>Message</label>
-      <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-      <p class="help-block text-danger"></p>
-    </div>
-  </div>
-  <br>
-  <div id="success"></div>
-  <div class="form-group">
-    <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
-  </div>
-</form>
+</section>

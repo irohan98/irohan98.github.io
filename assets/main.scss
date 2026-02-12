@@ -2,4 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+// Core theme styles (vendor + base)
 @import "styles";
+// Custom overrides and home page styling
+@import "custom";
