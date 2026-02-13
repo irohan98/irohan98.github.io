@@ -12,11 +12,20 @@
       </div>
 
       <!-- Primary navigation links -->
+      {% assign current_path = page.url | replace: 'index.html', '' | replace: '.html', '' %}
       <nav class="site-nav" aria-label="Primary">
-        <a href="{{ '/' | relative_url }}"><i class="fas fa-home" aria-hidden="true"></i><span>Home</span></a>
-        <a href="{{ '/about' | relative_url }}"><i class="far fa-user" aria-hidden="true"></i><span>About Me</span></a>
-        <a href="{{ '/resume' | relative_url }}"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Resume</span></a>
-        <a href="{{ '/contact' | relative_url }}"><i class="far fa-envelope" aria-hidden="true"></i><span>Contact</span></a>
+        <a class="nav-link{% if current_path == '/' or current_path == '' %} is-active{% endif %}" href="{{ '/' | relative_url }}"{% if current_path == '/' or current_path == '' %} aria-current="page"{% endif %}>
+          <i class="fas fa-home" aria-hidden="true"></i><span>Home</span>
+        </a>
+        <a class="nav-link{% if current_path == '/about' %} is-active{% endif %}" href="{{ '/about' | relative_url }}"{% if current_path == '/about' %} aria-current="page"{% endif %}>
+          <i class="far fa-user" aria-hidden="true"></i><span>About Me</span>
+        </a>
+        <a class="nav-link{% if current_path == '/resume' %} is-active{% endif %}" href="{{ '/resume' | relative_url }}"{% if current_path == '/resume' %} aria-current="page"{% endif %}>
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Resume</span>
+        </a>
+        <a class="nav-link{% if current_path == '/contact' %} is-active{% endif %}" href="{{ '/contact' | relative_url }}"{% if current_path == '/contact' %} aria-current="page"{% endif %}>
+          <i class="far fa-envelope" aria-hidden="true"></i><span>Contact</span>
+        </a>
       </nav>
 
       <!-- Optional social icons -->

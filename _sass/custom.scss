@@ -32,6 +32,27 @@ h1, h2, h3, h4 {
   margin: 0 0 12px;
 }
 
+/* Subtle motion system */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Paragraph defaults */
 p {
   margin: 0 0 18px;
@@ -51,7 +72,7 @@ a:hover {
 /* Main layout shell: sidebar + content */
 .site-shell {
   display: grid;
-  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+  grid-template-columns: 240px minmax(0, 1fr);
   min-height: 100vh;
 }
 
@@ -141,11 +162,28 @@ a:hover {
   padding: 10px 14px;
   border-radius: 12px;
   border: 1px solid transparent;
+  text-decoration: none;
 }
 
 .site-nav a:hover {
   border-color: rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.06);
+}
+
+.site-nav a i {
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+.site-nav a:visited {
+  color: inherit;
+}
+
+.site-nav a.is-active,
+.site-nav a[aria-current="page"] {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent);
 }
 
 /* Sidebar social links */
@@ -167,76 +205,33 @@ a:hover {
   padding: 56px 70px 80px;
 }
 
-/* Home page specific background */
+/* Home page background aligned to global theme */
 body.home {
-  background: #2f2f2f;
-}
-
-/* Home page: sidebar width + layout tweaks */
-.home .site-shell {
-  grid-template-columns: 100px minmax(0, 1fr);
+  background: radial-gradient(circle at 15% 10%, rgba(255, 123, 84, 0.18), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(54, 210, 197, 0.18), transparent 50%),
+    var(--bg);
 }
 
 /* Home page: sidebar + nav style */
-.home .site-shell {
-  grid-template-columns: 240px minmax(0, 1fr);
-}
 
 .home .sidebar {
-  padding: 26px 22px;
-  background: #1e2127;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 36px 28px;
+  background: rgba(23, 27, 34, 0.92);
+  border-right: 1px solid var(--line);
 }
 
 /* Home page: brand row (icon + name) */
 .home .sidebar-brand {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 0 0 18px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Home page: nav spacing */
-.home .site-nav {
-  gap: 0;
-  justify-items: stretch;
-  margin-top: 18px;
-}
-
-/* Home page: nav items (icon + label) */
-.home .site-nav a {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  padding: 18px 6px;
-  border-radius: 0;
-  color: rgba(255, 255, 255, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* Home page: nav icons */
-.home .site-nav a i {
-  font-size: 1.35rem;
-  color: #f0f0f0;
-}
-
-.home .site-nav a:hover {
-  background: transparent;
-  color: #fff;
-}
-
-.home .site-nav a:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: transparent;
-  color: #fff;
+  gap: 12px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--line);
 }
 
 .home .sidebar-social,
 .home .sidebar-footer {
-  display: none;
+  display: flex;
 }
 
 /* Home page: full-bleed content */
@@ -333,7 +328,7 @@ body.home {
   background: transparent;
   border: 1.5px solid rgba(255, 255, 255, 0.8);
   color: #fff;
-  padding: 8px 22px;
+  padding: 8px 12px;
   box-shadow: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -376,6 +371,7 @@ body.home {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.6);
 }
+
 
 /* Legacy hero section (kept for other pages if used) */
 .hero-section {
@@ -725,12 +721,12 @@ body.home {
     padding: 24px 18px;
   }
 
-  .home .site-nav {
+  .site-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     justify-items: stretch;
   }
 
-  .home .site-nav a {
+  .site-nav a {
     justify-items: center;
   }
 

@@ -5,8 +5,8 @@ body_class: home
 
 <!-- Home hero: left profile card + right intro copy -->
 
-<section class="home-hero">
-  <aside class="home-panel">
+<section class="home-hero reveal" data-reveal-delay="40">
+  <aside class="home-panel reveal" data-reveal-delay="120">
     <!-- Profile card content -->
     <div class="home-avatar" aria-hidden="true">RI</div>
     <h1 class="home-title">Rohan Ippalapally</h1>
@@ -24,7 +24,7 @@ body_class: home
     </div>
     <a class="btn home-cta" href="{{ '/resume' | relative_url }}">Download CV</a>
   </aside>
-  <div class="home-hero-copy">
+  <div class="home-hero-copy reveal" data-reveal-delay="220">
     <!-- Main intro copy -->
     <div class="home-hero-spacer" aria-hidden="true"></div>
     <h2>Hey! This is my personal portfolio hub</h2>
@@ -34,7 +34,7 @@ body_class: home
 
 <!-- Quick highlights beneath the hero -->
 <section class="hero-cards-grid">
-  <div class="info-card">
+  <div class="info-card reveal" data-reveal-delay="120">
     <h3>At a glance</h3>
     <ul class="info-list">
       <li><strong>I am:</strong> ML engineer + product-minded builder.</li>
@@ -42,7 +42,7 @@ body_class: home
       <li><strong>I enjoy:</strong> Cooking, hiking, travel, movies, music, and puns.</li>
     </ul>
   </div>
-  <div class="info-card accent">
+  <div class="info-card accent reveal" data-reveal-delay="200">
     <h3>Snapshot</h3>
     <div class="stat-grid">
       <div>
@@ -50,16 +50,16 @@ body_class: home
         <strong>4+ years</strong>
       </div>
       <div>
-        <span>Edge Accuracy</span>
-        <strong>94% precision</strong>
+        <span>Interested Roles</span>
+        <strong>ML and AI</strong>
       </div>
       <div>
-        <span>Latency Gains</span>
-        <strong>30% faster</strong>
+        <span>Location</span>
+        <strong>Phoenix, Arizona</strong>
       </div>
       <div>
-        <span>Patent</span>
-        <strong>US-20260019493</strong>
+        <span>Status</span>
+        <strong>Open to relocation</strong>
       </div>
     </div>
   </div>
