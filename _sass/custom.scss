@@ -191,11 +191,14 @@ a:hover {
   display: flex;
   gap: 16px;
   font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
 }
 
 /* Sidebar footer text */
 .sidebar-footer {
-  margin-top: auto;
+  margin-top: 12px;
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.45);
 }
@@ -328,11 +331,11 @@ body.home {
   background: transparent;
   border: 1.5px solid rgba(255, 255, 255, 0.8);
   color: #fff;
-  padding: 8px 12px;
+  padding: 6px 10px;
   box-shadow: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 0.74rem;
+  font-size: 0.68rem;
 }
 
 .home-cta:hover {
@@ -599,6 +602,20 @@ body.home {
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
 }
 
+.resume-column {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.resume-column .section-subtitle {
+  margin: 8px 0 4px;
+}
+
+.resume-column .section-subtitle:first-child {
+  margin-top: 0;
+}
+
 .timeline {
   display: grid;
   gap: 18px;
@@ -622,6 +639,8 @@ body.home {
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: stretch;
+  grid-auto-rows: 1fr;
 }
 
 .project-card,
@@ -633,7 +652,7 @@ body.home {
 }
 
 .skill-card {
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .contact-grid {

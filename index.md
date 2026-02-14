@@ -22,7 +22,7 @@ body_class: home
         <i class="far fa-envelope"></i>
       </a>
     </div>
-    <a class="btn home-cta" href="{{ '/resume' | relative_url }}">Download CV</a>
+    <a class="btn home-cta" href="{{ '/assets/Resume.pdf' | relative_url }}" download>Download CV</a>
   </aside>
   <div class="home-hero-copy reveal" data-reveal-delay="220">
     <!-- Main intro copy -->

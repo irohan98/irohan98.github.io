@@ -24,7 +24,7 @@ title: Contact
         </div>
         <div>
           <span>LinkedIn</span>
-          <strong><a href="https://www.linkedin.com/in/rohan-ippalapally" target="_blank" rel="noopener">rohan-ippalapally</a></strong>
+          <strong><a href="https://www.linkedin.com/in/irohan98" target="_blank" rel="noopener">rohan-ippalapally</a></strong>
         </div>
       </div>
       <a class="btn primary" href="mailto:irohan90839@gmail.com">Send Email</a>

@@ -86,6 +86,17 @@ title: Resume
           </div>
         </div>
       </div>
+
+      <!-- Publications + patent -->
+      <h3 class="section-subtitle">Publications & Patent</h3>
+      <div class="project-card">
+        <h4>US-20260019493 · USPTO Patent Application</h4>
+        <p>Patent application filed Jan 2026 covering advanced ML-driven monitoring systems.</p>
+      </div>
+      <div class="project-card">
+        <h4>Object Detection using Thermal Imaging · IEEE</h4>
+        <p>Publication (Dec 2020) on thermal imagery for robust object detection.</p>
+      </div>
     </div>
 
     <div class="resume-column">
@@ -199,17 +210,6 @@ title: Resume
       <div class="project-card">
         <h4>Certifications</h4>
         <p>Mathematics for Machine Learning (Oct 2020) · Deep Learning Specialization (Aug 2020) · SQL for Data Science (May 2020)</p>
-      </div>
-
-      <!-- Publications + patent -->
-      <h3 class="section-subtitle">Publications & Patent</h3>
-      <div class="project-card">
-        <h4>US-20260019493 · USPTO Patent Application</h4>
-        <p>Patent application filed Jan 2026 covering advanced ML-driven monitoring systems.</p>
-      </div>
-      <div class="project-card">
-        <h4>Object Detection using Thermal Imaging · IEEE</h4>
-        <p>Publication (Dec 2020) on thermal imagery for robust object detection.</p>
       </div>
     </div>
   </div>
