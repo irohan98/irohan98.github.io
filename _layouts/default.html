@@ -2,10 +2,16 @@
 <html>
 {% include head.html %}
 <body class="site{% if page.body_class %} {{ page.body_class }}{% endif %}">
+  <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-sidebar">
+    <span class="menu-bar"></span>
+    <span class="menu-bar"></span>
+    <span class="menu-bar"></span>
+  </button>
+  <div class="mobile-menu-backdrop" data-menu-close></div>
   <!-- Page shell: sidebar + main content -->
   <div class="site-shell">
     <!-- Left sidebar navigation -->
-    <aside class="sidebar">
+    <aside class="sidebar" id="site-sidebar">
       <div class="sidebar-brand">
         <span class="brand-mark">RI</span>
         <span class="brand-text">Rohan</span>
