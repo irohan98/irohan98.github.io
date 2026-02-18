@@ -831,7 +831,28 @@ body.home {
 
   .home-hero {
     grid-template-columns: 1fr;
-    padding: 50px 0 36px;
-    gap: 36px;
+    min-height: auto;
+    padding: 50px 0 24px;
+    gap: 24px;
+  }
+
+  body.home .home-panel {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body.home .home-hero-spacer {
+    height: 0;
+  }
+
+  body.home .hero-cards-grid {
+    grid-template-columns: 1fr;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    width: 100%;
   }
 }
